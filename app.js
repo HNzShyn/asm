@@ -12,7 +12,7 @@ var customerRouter = require('./routes/customer');
 
 
 var mongoose = require('mongoose')
-var url = 'mongodb://localhost:27017/asm';
+var url = 'mongodb+srv://hnzshyn:shyn1903112002@cluster0.djzhqbp.mongodb.net/test';
 
 mongoose.connect(url, { useNewUrlParser: true }, err => {
     if (!err) {
