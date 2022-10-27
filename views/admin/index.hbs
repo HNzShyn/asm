@@ -1,0 +1,65 @@
+<h1 class="text-center" style="margin-top: 10px;">Toy List</h1>
+<div class="row form-inline" style="display: block;">
+   <div class="left">
+      <div class="block">
+         <div class="title text-center">Manage Toy</div>
+         <div class="content">
+            <ul>
+               <li><a href="/admin">View All Toy</a></li>
+               <li><a href="/admin/add">Add New Toy</a></li>
+               <li><a href="/admin/drop" onclick="return confirm('Are you sure to drop all student ?');">Delete All Toy</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="main">
+      <div class="row ft form-inline">
+         <div class="sort">
+            <select class="form-control bg-secondary" style="color: white" onchange="window.location.href=this.value">
+               <option value="">Sort by name</option>
+               <option value="/admin/sort/asc">Ascending</option>
+               <option value="/admin/sort/desc">Descending</option>
+            </select>
+         </div>
+         <div class="search">
+            <form action="/admin/search" method="post" class="form-inline">
+               <input class="form-control" type="search" name="name" placeholder="Search">
+               <button class="btn btn-secondary" type="submit">Search</button>
+            </form>
+         </div>
+      </div>
+
+      <div class="container text-center">
+         <table class="table p-4 mt-3 mb-3">
+
+            <tr style="background-color: #6C7B8B;">
+               <th>Image</th>
+               <th>Name</th>
+               <th>Release Date</th>
+               <th>Color</th>
+               <th>Price</th>
+               <th>Brand</th>
+               <th>Action</th>
+            </tr>
+            {{#each toy }}
+            <tr>
+               <td>
+                  <a href="/admin/detail/{{_id}}"><img src="{{image}}"></a>
+               </td>
+               <td style="width: 23%;">{{name}}</td>
+               <td>{{dateFormat dob 'DD-MM-YYYY'}}</td>
+               <td>{{color}}</td>
+               <td>${{price}}</td>
+               <td>
+                  {{brand}}
+               </td>
+               <td>
+                  <a class="btn btn-warning" href="/admin/edit/{{_id}}">EDIT</a>
+                  <a class="btn btn-danger" href="/admin/delete/{{_id}}">DELETE</a>
+               </td>
+            </tr>
+            {{/each}}
+         </table>
+      </div>
+   </div>
+</div>

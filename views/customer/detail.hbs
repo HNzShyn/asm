@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="product">
+        <img src="{{toy.image}}" alt="" class="border border-primary rounded">
+        <div class="content">
+            <h2>{{toy.name}}</h2>
+            <p class="font-weight-bold">Release Date: {{dateFormat toy.dob 'DD-MM-YYYY'}}</p>
+            <p class="font-weight-bold">Price: ${{toy.price}}</p>
+            <p>__________Description__________</p>
+            <br>
+            <p>Color: {{toy.color}}</p>
+            <p>Brand: {{toy.brand}}</p>
+            <p style="text-align: start;">{{toy.description}}</p>
+            <div class="btn btn-danger" >
+                <a href="/customer" style="text-decoration: none; font-size: 20px; color:white;">Back</a>
+            </div>
+            <div class="btn btn-info" style="margin: 20px 15px">
+                <a style="margin-right: 5px;">Add To Cart</a><i class="fa-solid fa-cart-plus"></i>
+            </div>
+        </div>
+    </div>
+</div>

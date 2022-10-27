@@ -1,0 +1,37 @@
+<div class="container col-md-6 mt-5 add table-bordered">
+   <form action="/admin/add" method="post" class=" p-3 text-center">
+      <h2 class="text">Add New Toy</h2>
+      <div class="form-group">
+         <label class=" h6">Name</label>
+         <input class="form-control" type="text" name="name" required>
+      </div>
+      <div class="form-group">
+         <label class=" h6">Color</label>
+         <input class="form-control" type="text" name="color" required>
+      </div>
+      <div class="form-group">
+         <label class="h6">Price</label>
+         <input class="form-control" type="text" name="price" required>
+      </div>
+      <div class="form-group mt-3">
+         <label class="h6">Image</label>
+         <input class="form-control" type="text" name="image" required>
+      </div>
+      <div class="form-group mt-3">
+         <label class=" h6">Release Date</label>
+         <input class="form-control" type="date" name="date" required>
+      </div>
+      <div class="form-group mt-3">
+         <label class="h6">Brand</label>
+         <input class="form-control" type="text" name="brand" required>
+      </div>
+      <div class="form-group mt-3">
+			<label class="h6">Description</label>
+			<textarea class="form-control" name="description" value="" style="width: 700px; height: 200px;"></textarea>
+		</div>
+      <div class="form-group mt-3">
+        <button class="btn btn-danger "><a href="/admin" style="text-decoration: none; font-size: 20px; color:white;">Back</a></button>
+         <input class="btn btn-success bg-success" style="font-size: 20px;" type="submit" value="Add">
+      </div>
+   </form>
+</div>
