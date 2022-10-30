@@ -93,6 +93,17 @@ table img {
   color: white;
 }
 
+.size{
+  background: rgba(0,0,0,0);
+  color: white;
+}
+
+.size:hover, ::placeholder{
+  color: white;
+  background: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0);
+}
+
 .add input:hover, ::placeholder, ::after{
   color: white;
   background: rgba(0,0,0,0);
@@ -245,7 +256,6 @@ footer{
 .ct{
   width: 100%;
   margin: 15px 5px 15px 65%;
-  float: right;
 }
 
 .ct li{
